@@ -1,0 +1,21 @@
+#server:
+#  type: simple
+#  applicationContextPath: /v1
+server:
+  applicationConnectors:
+  - type: http
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081
+
+logging:
+  # The default level of all loggers. Can be OFF, ERROR, WARN, INFO, DEBUG, TRACE, or ALL.
+  level: INFO
+  # Logger-specific levels.
+  loggers:
+    org.skife.jdbi.v2: INFO
+    org.theblackproject: DEBUG
+
+  appenders:
+    - type: console
